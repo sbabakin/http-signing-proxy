@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: ${project.artifactId}
+  main:
+    banner-mode: "off"
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write_dates_as_timestamps: false
+      write_dates_with_zone_id: true
+      indent_output: true
+    mapper:
+      default_view_inclusion: true
+    deserialization:
+      fail_on_unknown_properties: false
+  cloud:
+    gateway:
+      httpclient:
+        response-timeout: 15s
+
+server:
+  error: # Configuration of error handling
+    include-exception: true
+    include-stacktrace: always
+    whitelabel:
+      enabled: true
+  port: 8081
+  forward-headers-strategy: none
+  ssl:
+    enabled: false
+
+application:
+  proxy:
+    path: "/api"
+  gateway:
+    uri: "${SIGNING_PROXY_GATEWAY_URI}"
+    path: "${SIGNING_PROXY_GATEWAY_PATH}"
+  signing:
+    certificate: "${SIGNING_PROXY_CERTIFICATE}"
+    privateKey: "${SIGNING_PROXY_PRIVATE_KEY}"
+    privateKeyPass: "${SIGNING_PROXY_PRIVATE_KEY_PASS}"
+    privateKeyId: "${SIGNING_PROXY_PRIVATE_KEY_ID}"
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.springframework.cloud: DEBUG
+    dev.sb.services: DEBUG
+  file:
+    name: logs/app.log
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,gateway

@@ -1,0 +1,63 @@
+application:
+  proxy:
+    path: "/api"
+  gateway:
+    uri: "http://localhost:22223"
+    path: "/third-party/api"
+  signing:
+    certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIIC2DCCAcACCQD1FY28DjhYxjANBgkqhkiG9w0BAQsFADAuMQswCQYDVQQGEwJV
+      QTEQMA4GA1UECAwHVWtyYWluZTENMAsGA1UEBwwES3lpdjAeFw0yMDA0MjgxNzIx
+      MzlaFw0zMDA0MjYxNzIxMzlaMC4xCzAJBgNVBAYTAlVBMRAwDgYDVQQIDAdVa3Jh
+      aW5lMQ0wCwYDVQQHDARLeWl2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEA0NyLqIEKzR/HqOh9NAMaX9Z8tPFE6w1ExRxOMBJ+6/+kWN/z+Ng9H9bOE4K6
+      E177+PxV3kCSeixeuFDw//tBTaftzF0SUoaWp9OOxQRxgajDNgoQBVZgdh8U8I+0
+      vnkSnsCSqeFA7dF4ffVlHWgcOIguiuYME5YNi4bH8MWKqjPNzlSZXOzv9Zr7/xtI
+      HVRLT2taLs0mNLy44DvpO0bU0aGODcLYhwA0kIgxKpcHlPn7dxEtoZS2WBTD60cw
+      8BV20w+KAfZBrh+aCxl+dtVCflsFdbjafjiGf94ePDFSOjK9mN4b6Sb+iuStY81B
+      frYQuHncThY3NNHqXHw3e7S3TwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA2hM9K
+      iPhXoZBILGK77Xkkohhk1DDuoL4IhK26R14URIUW1kf3TB/907vbY9pB0qKROBSy
+      F3NKDC6VOGKmdQMP2+4uk1PgyMHYvwrm68+iHjeoGa8NSoqm7c6KdD2a6Dk3IAxg
+      LUPUzZHjaW3mAfv1SLFWGMHcTzMwNmflQ1DuppN9ard7qzvL5rEP40IHetamnTVP
+      SimB7+St6BVPMfMz/kJ+xoSrl7TaZozyJVZVwLHdl2e75HyJ+gAR73rTItFedPFv
+      3yWH5c87YyoFlRNUNWBnAS/Y0BztasyeJCpB5vUo79dwohV7J9griA6qe356FAT/
+      GGrAJiHXybqiEnCH
+      -----END CERTIFICATE-----
+    privateKey: |
+      -----BEGIN ENCRYPTED PRIVATE KEY-----
+      MIIFHzBJBgkqhkiG9w0BBQ0wPDAbBgkqhkiG9w0BBQwwDgQIZMOJqXCieSMCAggA
+      MB0GCWCGSAFlAwQBKgQQ48XoNbHVCBe3Qip1q9itLwSCBNBEWNCYgq48XGuRNAlL
+      Uy+bg3gILKQRhL8LwC7n4CkQR0MlZ1hh7quyv4wAoVSf32qujQgkNylH8bdeVbDb
+      B5Kyy3RfSxnLs/31tJBgDsvhfL0/xY0rPNJHuN2ImV13MccGGBW6FrjWpXb/xDl7
+      blppUYVA1u4RZhFiz91x5gxCHmIgYB6sloQ/eR6dXrCKBh68neeKBWI1Qgacq3zA
+      eg4EPOePQzK/vtQFbqOikZGy6r7qctpW1UIb4A9/h39jRRCS+loqxnjF5pq3ztSw
+      cQWZ7JdS8W8JiVBHTYPDLkKKhyrl6ZLb2nRdILQMVMPzihsuDZMBJwqNG9xaM5wn
+      Ifb1CYgwjd70OKVyKPpMUe0w6K5Ai2XTT5E7mPVcHERgLvhsOPFp/gMGa+Tt+k6h
+      TdvOD2NzaV7S6xrDJ8BjtVV6k3SIE9Pds50rytH5OhxoLAHl2BeX0WAikmv8novE
+      TkHBCEOZMACgYyFhqnbR05fbLg0PqHxOuT21+p8vG+2XCE8uaPm44bhvFWUq5hJ0
+      y9XhajXgPeqDPg/UmFf52WSLC0t/J63bhJyM7/TwZjuo/YLs9zDl6wzFpANG6ryu
+      Nm9OITV0G+MIyEDIzGsp+frjoIXhZi3DgIo2IleUmApDTzwvk8iaMk3MmQA+52jo
+      c8xjefWkOuWDQp8RHx2I6sCjmRUUR3X2Tw7ZLs2hh8cvPTAa2livmOA76O7hnLF8
+      ZSjrmkkUkR0nHHWvR1KfWWaQlurYGBRKrgLwTahtdcNx/ykYVUq3yeUcO4CbG2S1
+      EqeesXKQ+W8LJLVxBj+rH3p+NI8RHGMU9m1j3FKSdC1A/NJQDWKi6DHuiUruPvUk
+      K5C6TbY65zPHAVy+tXNXn4RwFxXLqI0r0UtCdT5ls1DhBYT4mcJjNRCwqUk2cnhj
+      bVn1thRIbxn+3BW07ixXO7b7ODcJVl4qhB0FQ18RoDPNVFWtpaIWWyV/TWcSR7GN
+      FEhj/bOJwIwg7eNsBRZIVGCwMTBZggpdHeQvoOJvOomeoqyNipFP3EdHSguEhi0E
+      eGrPRdccjIL9tH3S+K7Mqeg0CTm0FkUCB35+WmkwOkfd8MDnj8xSvHPV8exlE4Ph
+      x7odIrjh2WDctgR+J1j621or5LUhT/dbBtMT9t2bWeE5oVij0Vq46pG/FIdm04Mq
+      b/lqGkxWtyGsX8wbuyGTNGdNqlSg8XxR2o3kOIF1Gygy5inXWxIMIdHTGOgaef5E
+      ZXyTNfePj8XpzAX4ryAqhir0rylXby5/GA/dVzE+Ux0VttybgItQAIpA1F0FNBlV
+      ob/Pb68XmsUe6viZN436f1OKomCt70S1lWI/5Gu1HHRsm1CDY3xnJ7cyRe51fqiH
+      Z5WrTBpPH5Xen4Zth1zrvFx+V+AtKn+KomK3JfS2fydgRxU5AJc/+FJH50pJIxxk
+      konPDn3t5gJpJRZnE/sWbqjMdGII4XpW91l8yCBFFVfvYSAcxm+5N0TFYCEJoZKp
+      PGbOprIFBSFMRZa5b0hN7H5n4tNTxtL3G6uDmaYewB8xhjocEJEPDT62xYif5wF8
+      6kSPhHtIA1Zm0raRWGOWMY3wMxqVtLnktYsI2e3THkYLfrJbXSTtqG444ac+ET/C
+      bQop31YlGrKW5jrbyX2RM8ot1Q==
+      -----END ENCRYPTED PRIVATE KEY-----
+    privateKeyPass: "secret!"
+    privateKeyId: "ABC12345"
+
+logging:
+  level:
+    com.github.tomakehurst.wiremock: DEBUG
